@@ -43,8 +43,9 @@ class ReactSlick extends Component {
   }
 
   getBooksData = async () => {
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     const jwtToken = Cookies.get('jwt_token')
-    const url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=7e3f2f26c797454dbc5b6e16c9c2382a`
+    const url = `${proxyUrl}https://newsapi.org/v2/top-headlines?country=in&apiKey=7e3f2f26c797454dbc5b6e16c9c2382a`
     const options = {
       method: 'GET',
       headers: {
