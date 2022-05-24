@@ -49,7 +49,7 @@ class ReactSlick extends Component {
 //     const request = new Request(url)
     const options = {
       method: 'GET',
-      'mode': 'cors'
+      'mode': 'cors',
       headers: {
         Authorization: `Bearer ${jwtToken}`,
         'Access-Control-Allow-Origin': '*'
