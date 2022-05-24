@@ -43,16 +43,16 @@ class ReactSlick extends Component {
   }
 
   getBooksData = async () => {
-//     const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+    //     const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     const jwtToken = Cookies.get('jwt_token')
     const url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=7e3f2f26c797454dbc5b6e16c9c2382a`
-//     const request = new Request(url)
+    //     const request = new Request(url)
     const options = {
       method: 'GET',
-      'mode': 'cors',
+      mode: 'cors',
       headers: {
         Authorization: `Bearer ${jwtToken}`,
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
     }
     const response = await fetch(url, options)
